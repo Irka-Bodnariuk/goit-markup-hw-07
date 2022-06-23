@@ -1,0 +1,28 @@
+.button {
+  min-width: 200px;
+  height: 50px;
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  text-align: center;
+
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+
+  // незнаю чи треба
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: var(--tipical-margin);
+
+  transition: color var(--transition-active), background-color var(--transition-active);
+}
