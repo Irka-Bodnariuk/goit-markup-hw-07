@@ -103,7 +103,6 @@
 
   &__button {
     display: flex;
-
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition: background-color var(--transition-active), box-shadow var(--transition-active);
     &:hover,

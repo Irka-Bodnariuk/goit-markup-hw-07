@@ -24,7 +24,7 @@
   transition: transform var(--transition-active);
   padding: 40px;
 }
-.modal-close-button {
+.close-button {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -38,12 +38,12 @@
   align-items: center;
   padding: 0;
   transition: fill var(--transition-active);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }
 
-.modal-close-button:hover,
-.modal-close-button:focus {
-  fill: var(--accent-color);
-}
 .modal-title {
   color: var(--title-color);
   font-weight: 700;
@@ -74,6 +74,9 @@
   top: 50%;
   transform: translateY(-50%);
   transition: fill var(--transition-active);
+  .modal-input:focus + & {
+    fill: var(--accent-color);
+  }
 }
 .modal-input {
   width: 100%;
@@ -88,15 +91,9 @@
   letter-spacing: 0.01em;
   outline: none;
   transition: border-color var(--transition-active);
-}
-
-.modal-input:focus,
-.modal-text:focus {
-  border-color: var(--accent-color);
-}
-
-.modal-input:focus + .modal-icon {
-  fill: var(--accent-color);
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 
 .modal-text {
@@ -113,13 +110,16 @@
   letter-spacing: 0.01em;
   outline: none;
   transition: border-color var(--transition-active);
-}
-.modal-text::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  &:focus {
+    border-color: var(--accent-color);
+    &::placeholder {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.17;
+      letter-spacing: 0.01em;
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
 }
 
 .modal-comment {
@@ -158,42 +158,26 @@
   fill: transparent;
   transition: border var(--transition-active), background-color var(--transition-active),
     fill var(--transition-active);
-}
-
-.check-input:checked + .check-text .check-icon {
-  background-color: var(--accent-color);
-  border: none;
-  fill: var(--white-color);
+  .check-input:checked + .check-text & {
+    background-color: var(--accent-color);
+    border: none;
+    fill: var(--white-color);
+  }
 }
 
 .modal-button {
-  min-width: 200px;
-  height: 50px;
-  margin: 0 auto;
-  color: var(--white-color);
-  background-color: var(--accent-color);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
+  margin: 0 auto;
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: color var(--transition-active), background-color var(--transition-active),
     box-shadow var(--transition-active);
-}
-
-.modal-button:hover,
-.modal-button:focus {
-  color: var(--white-color);
-  background-color: var(--button-hover-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &:hover,
+  &:focus {
+    color: var(--white-color);
+    background-color: var(--button-hover-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
 }
 
 .is-hidden {
