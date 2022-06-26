@@ -5,17 +5,17 @@
 @import './base/common';
 
 // @import './';
-@import './components/logo';
-@import './components/socials';
+@import './utils/logo';
+@import './utils/socials';
 
-@import './layout/header';
-@import './layout/hero';
-@import './layout/studio';
-@import './layout/works';
-@import './layout/team';
-@import './layout/clients';
-@import './layout/footer';
+@import './components/header';
+@import './components/hero';
+@import './components/studio';
+@import './components/works';
+@import './components/team';
+@import './components/clients';
+@import './components/footer';
 
-@import './layout/modal';
+@import './components/modal';
 
-@import './layout/portfolio';
+@import './components/portfolio';
