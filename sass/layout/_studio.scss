@@ -1,7 +1,7 @@
 .studio {
   background-color: $white-color;
   &__list {
-    display: flex;
+    @include centredFlex($ai: none, $jc: none);
     margin-left: calc(-1 * $tipical-margin);
   }
 
@@ -10,12 +10,10 @@
     margin-left: $tipical-margin;
   }
   &__thumb {
-    display: flex;
+    @include centredFlex();
     width: 270px;
     height: 120px;
     background-color: $button-portfolio-color;
-    justify-content: center;
-    align-items: center;
     border-radius: 4px;
     margin-bottom: $tipical-margin;
   }

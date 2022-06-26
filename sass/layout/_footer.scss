@@ -65,7 +65,7 @@
 }
 
 .form {
-  display: flex;
+  @include centredFlex($ai: none, $jc: none);
 
   &__input {
     background-color: transparent;
@@ -78,7 +78,7 @@
     line-height: 1.25;
     letter-spacing: 0.03em;
     /* color: $accent-color; */
-    color: $rgba-color
+    color: $rgba-color;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
@@ -96,19 +96,19 @@
       font-size: 16px;
       line-height: 1.25;
       letter-spacing: 0.03em;
-      color: $rgba-color
+      color: $rgba-color;
     }
   }
 
   &__button {
     @extend %button;
     @include centredFlex();
-    box-shadow: $box-shadow-rgba
+    box-shadow: $box-shadow-rgba;
     transition: background-color $transition-active, box-shadow $transition-active;
     &:hover,
     &:focus {
       background-color: $button-hover-color;
-      box-shadow: $box-shadow-rgba
+      box-shadow: $box-shadow-rgba;
     }
   }
 }

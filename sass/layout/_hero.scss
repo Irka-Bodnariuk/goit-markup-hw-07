@@ -27,7 +27,7 @@
   }
   &__button {
     @extend %button;
-    display: inline-block;
+    @include centredFlex($df: inline-block);
     margin-top: $tipical-margin;
 
     transition: color $transition-active, background-color $transition-active;

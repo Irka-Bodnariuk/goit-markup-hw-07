@@ -1,12 +1,11 @@
 @import './utils/variables';
-
-@import './base/common';
 @import './utils/hidden';
-
 @import './utils/mixin';
+@import './utils/placeholders';
+@import './base/common';
+
 // @import './';
 @import './components/logo';
-@import './components/button';
 @import './components/socials';
 
 @import './layout/header';
