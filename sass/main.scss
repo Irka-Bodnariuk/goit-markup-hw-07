@@ -1,12 +1,13 @@
 @import './utils/variables';
+@import './base/common';
+@import './base/reset';
 @import './utils/hidden';
 @import './utils/mixin';
 @import './utils/placeholders';
-@import './base/common';
 
 // @import './';
-@import './utils/logo';
-@import './utils/socials';
+@import './components/logo';
+@import './components/socials';
 
 @import './components/header';
 @import './components/hero';
