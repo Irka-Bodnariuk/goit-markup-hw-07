@@ -1,5 +1,5 @@
 .clients {
-  background-color: var(--white-color);
+  background-color: $white-color;
   &__list {
     display: flex;
     justify-content: center;
@@ -8,7 +8,7 @@
   &__item {
     width: 170px;
     height: 92px;
-    margin-left: var(--tipical-margin);
+    margin-left: $tipical-margin;
     &:first-child {
       margin-left: 0;
     }
@@ -19,15 +19,15 @@
     height: 100%;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--fill-icon);
+    border: 1px solid $fill-icon;
     border-radius: 4px;
-    color: var(--fill-icon);
+    color: $fill-icon;
     fill: currentColor;
-    transition: border-color var(--transition-active), fill var(--transition-active);
+    transition: border-color $transition-active, fill $transition-active;
     &:hover,
     &:focus {
-      border-color: var(--accent-color);
-      fill: var(--accent-color);
+      border-color: $accent-color;
+      fill: $accent-color;
     }
   }
 }

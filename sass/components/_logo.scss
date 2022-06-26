@@ -1,14 +1,14 @@
 .logo {
-  color: var(--black-color);
+  color: $black-color;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   &--color {
-    color: var(--accent-color);
+    color: $accent-color;
   }
   &--footer-color {
-    color: var(--white-color);
+    color: $white-color;
   }
 }

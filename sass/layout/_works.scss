@@ -1,15 +1,15 @@
 .works {
   padding-top: 0;
-  background-color: var(--white-color);
+  background-color: $white-color;
   &__list {
     margin-top: 50px;
     display: flex;
-    margin-left: calc(-1 * var(--tipical-margin));
+    margin-left: calc(-1 * $tipical-margin);
   }
 
   &__item {
-    flex-basis: calc(100% / 3 - var(--tipical-margin));
-    margin-left: var(--tipical-margin);
+    flex-basis: calc(100% / 3 - $tipical-margin);
+    margin-left: $tipical-margin;
   }
   &__thumb {
     position: relative;
@@ -19,11 +19,8 @@
     width: 100%;
     height: 70px;
     bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: var(--white-color);
+    @include centredFlex();
+    color: $white-color;
     background-color: rgba(47, 48, 58, 0.8);
     font-weight: 700;
     font-size: 14px;

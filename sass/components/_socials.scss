@@ -17,10 +17,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color var(--transition-active);
+    transition: background-color $transition-active;
     &:hover,
     &:focus {
-      background-color: var(--accent-color);
+      background-color: $accent-color;
     }
   }
 }

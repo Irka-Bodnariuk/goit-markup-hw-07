@@ -1,26 +1,26 @@
 .studio {
-  background-color: var(--white-color);
+  background-color: $white-color;
   &__list {
     display: flex;
-    margin-left: calc(-1 * var(--tipical-margin));
+    margin-left: calc(-1 * $tipical-margin);
   }
 
   &__item {
-    flex-basis: calc(100% / 4 - var(--tipical-margin));
-    margin-left: var(--tipical-margin);
+    flex-basis: calc(100% / 4 - $tipical-margin);
+    margin-left: $tipical-margin;
   }
   &__thumb {
     display: flex;
     width: 270px;
     height: 120px;
-    background-color: var(--button-portfolio-color);
+    background-color: $button-portfolio-color;
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    margin-bottom: var(--tipical-margin);
+    margin-bottom: $tipical-margin;
   }
   &__subtitle {
-    color: var(--title-color);
+    color: $title-color;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -30,7 +30,7 @@
   &__text {
     margin-top: 10px;
 
-    color: var(--text-color);
+    color: $text-color;
     font-size: 14px;
     line-height: 1.71;
   }

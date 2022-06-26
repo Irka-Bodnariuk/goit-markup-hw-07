@@ -17,7 +17,7 @@
   background-size: cover;
   text-align: center;
   &__title {
-    color: var(--white-color);
+    color: $white-color;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -26,14 +26,15 @@
     text-transform: uppercase;
   }
   &__button {
+    @extend %button;
     display: inline-block;
-    margin-top: var(--tipical-margin);
+    margin-top: $tipical-margin;
 
-    transition: color var(--transition-active), background-color var(--transition-active);
+    transition: color $transition-active, background-color $transition-active;
     &:hover,
     &:focus {
-      color: var(--white-color);
-      background-color: var(--button-hover-color);
+      color: $white-color;
+      background-color: $button-hover-color;
     }
   }
 }

@@ -1,5 +1,5 @@
 body {
-  color: var(--text-color);
+  color: $text-color;
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
 }
@@ -32,7 +32,7 @@ p {
 }
 
 .title {
-  color: var(--title-color);
+  color: $title-color;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -48,6 +48,6 @@ p {
 }
 
 .section-content {
-  padding-top: var(--tipical-padding);
-  padding-bottom: var(--tipical-padding);
+  padding-top: $tipical-padding;
+  padding-bottom: $tipical-padding;
 }

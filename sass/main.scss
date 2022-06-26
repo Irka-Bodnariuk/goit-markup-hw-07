@@ -1,8 +1,9 @@
 @import './utils/variables';
+
 @import './base/common';
 @import './utils/hidden';
 
-// @import './';
+@import './utils/mixin';
 // @import './';
 @import './components/logo';
 @import './components/button';

@@ -4,7 +4,7 @@
   min-height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   top: 0;
-  transition: opacity var(--transition-active), visibility var(--transition-active);
+  transition: opacity $transition-active, visibility $transition-active;
 }
 
 .backdrop.is-hidden .modal {
@@ -14,14 +14,14 @@
   position: absolute;
   width: 528px;
   min-height: 581px;
-  background-color: var(--white-color);
+  background-color: $white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1) rotate(0);
-  transition: transform var(--transition-active);
+  transition: transform $transition-active;
   padding: 40px;
 }
 .close-button {
@@ -37,15 +37,15 @@
   justify-content: center;
   align-items: center;
   padding: 0;
-  transition: fill var(--transition-active);
+  transition: fill $transition-active;
   &:hover,
   &:focus {
-    fill: var(--accent-color);
+    fill: $accent-color;
   }
 }
 
 .modal-title {
-  color: var(--title-color);
+  color: $title-color;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -73,9 +73,9 @@
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  transition: fill var(--transition-active);
+  transition: fill $transition-active;
   .modal-input:focus + & {
-    fill: var(--accent-color);
+    fill: $accent-color;
   }
 }
 .modal-input {
@@ -90,9 +90,9 @@
   line-height: 16px;
   letter-spacing: 0.01em;
   outline: none;
-  transition: border-color var(--transition-active);
+  transition: border-color $transition-active;
   &:focus {
-    border-color: var(--accent-color);
+    border-color: $accent-color;
   }
 }
 
@@ -109,9 +109,9 @@
   line-height: 1.17;
   letter-spacing: 0.01em;
   outline: none;
-  transition: border-color var(--transition-active);
+  transition: border-color $transition-active;
   &:focus {
-    border-color: var(--accent-color);
+    border-color: $accent-color;
     &::placeholder {
       font-weight: 400;
       font-size: 12px;
@@ -126,7 +126,7 @@
   margin-bottom: 20px;
 }
 .modal-check {
-  margin-bottom: var(--tipical-margin);
+  margin-bottom: $tipical-margin;
 }
 
 .check-text {
@@ -140,7 +140,7 @@
   align-items: center;
 }
 .modal-link {
-  color: var(--accent-color);
+  color: $accent-color;
   margin-left: 4px;
 }
 
@@ -153,30 +153,31 @@
 .check-icon {
   width: 16px;
   height: 15px;
-  border: 2px solid var(--title-color);
+  border: 2px solid $title-color;
   border-radius: 2px;
   fill: transparent;
-  transition: border var(--transition-active), background-color var(--transition-active),
-    fill var(--transition-active);
+  transition: border $transition-active, background-color $transition-active,
+    fill $transition-active;
   .check-input:checked + .check-text & {
-    background-color: var(--accent-color);
+    background-color: $accent-color;
     border: none;
-    fill: var(--white-color);
+    fill: $white-color;
   }
 }
 
 .modal-button {
-  display: flex;
+  @extend %button;
+  @include centredFlex();
   margin: 0 auto;
 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: color var(--transition-active), background-color var(--transition-active),
-    box-shadow var(--transition-active);
+  box-shadow: $box-shadow-rgba
+  transition: color $transition-active, background-color $transition-active,
+    box-shadow $transition-active;
   &:hover,
   &:focus {
-    color: var(--white-color);
-    background-color: var(--button-hover-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    color: $white-color;
+    background-color: $button-hover-color;
+    box-shadow: $box-shadow-rgba
   }
 }
 
