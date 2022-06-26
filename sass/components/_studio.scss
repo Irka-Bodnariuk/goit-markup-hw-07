@@ -1,6 +1,10 @@
 .studio {
   background-color: $white-color;
+  &__title {
+    @extend %title;
+  }
   &__list {
+    @extend %list;
     @include centredFlex($ai: none, $jc: none);
     margin-left: calc(-1 * $tipical-margin);
   }

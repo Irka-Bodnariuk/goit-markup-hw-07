@@ -80,7 +80,7 @@ p {
   border: none;
 }
 
-.contact, .navigation__list {
+.studio__list, .contact, .navigation__list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -88,6 +88,15 @@ p {
 
 .contact__link, .navigation__link {
   text-decoration: none;
+}
+
+.studio__title {
+  color: #212121;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
 .logo {
