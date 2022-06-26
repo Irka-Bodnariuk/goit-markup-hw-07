@@ -80,17 +80,17 @@ p {
   border: none;
 }
 
-.studio__list, .contact, .navigation__list {
+.team__list, .works__list, .studio__list, .contact, .navigation__list, .socials {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.contact__link, .navigation__link {
+.contact__link, .navigation__link, .socials__link {
   text-decoration: none;
 }
 
-.studio__title {
+.team__title, .works__title, .studio__title {
   color: #212121;
   font-weight: 700;
   font-size: 36px;

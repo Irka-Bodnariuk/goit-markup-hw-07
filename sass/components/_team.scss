@@ -1,6 +1,10 @@
 .team {
   background-color: $button-portfolio-color;
+  &__title {
+    @extend %title;
+  }
   &__list {
+    @extend %list;
     @include centredFlex($ai: none, $jc: none);
     margin-left: calc(-1 * $tipical-margin);
     margin-top: 50px;
