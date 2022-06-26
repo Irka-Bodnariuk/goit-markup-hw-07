@@ -7,24 +7,7 @@
   transition: opacity $transition-active, visibility $transition-active;
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0) rotate(180deg);
-}
-.modal {
-  position: absolute;
-  width: 528px;
-  min-height: 581px;
-  background-color: $white-color;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1) rotate(0);
-  transition: transform $transition-active;
-  padding: 40px;
-}
-.close-button {
+.button__close {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -42,59 +25,89 @@
   }
 }
 
-.modal-title {
-  color: $title-color;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.03em;
-  text-align: center;
-  margin-bottom: 12px;
-}
-.modal-field {
-  margin-bottom: 10px;
-}
-.modal-lable {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  margin-bottom: 4px;
-  @include centredFlex($df: block, $ai: none, $jc: none);
-}
-.input-wrap {
-  position: relative;
-}
-
-.modal-icon {
+.modal {
   position: absolute;
-  left: 12px;
+  width: 528px;
+  min-height: 581px;
+  background-color: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   top: 50%;
-  transform: translateY(-50%);
-  transition: fill $transition-active;
-  .modal-input:focus + & {
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1) rotate(0);
+  transition: transform $transition-active;
+  padding: 40px;
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0) rotate(180deg);
+  }
+  &__title {
+    color: $title-color;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  &__field {
+    margin-bottom: 10px;
+  }
+  &__lable {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+    @include centredFlex($df: block, $ai: none, $jc: none);
+  }
+  &__wrap {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill $transition-active;
+  }
+  &__input:focus + &__icon {
     fill: $accent-color;
   }
-}
-.modal-input {
-  width: 100%;
-  height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
 
-  padding-left: 42px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.01em;
-  outline: none;
-  transition: border-color $transition-active;
-  &:focus {
-    border-color: $accent-color;
+  &__input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    padding-left: 42px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    outline: none;
+    transition: border-color $transition-active;
+    &:focus {
+      border-color: $accent-color;
+    }
+  }
+
+  &__comment {
+    margin-bottom: 20px;
+  }
+  &__check {
+    margin-bottom: $tipical-margin;
+  }
+
+  &__link {
+    color: $accent-color;
+    margin-left: 4px;
   }
 }
 
-.modal-text {
+.modal__text {
   width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -120,31 +133,18 @@
   }
 }
 
-.modal-comment {
-  margin-bottom: 20px;
-}
-.modal-check {
-  margin-bottom: $tipical-margin;
-}
-
-.check-text {
+.check__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
   @include centredFlex();
 }
-.modal-link {
-  color: $accent-color;
-  margin-left: 4px;
-}
-
-.check-text span {
+.check__text span {
   margin-right: 8px;
   @include centredFlex();
 }
-.check-icon {
+.check__icon {
   width: 16px;
   height: 15px;
   border: 2px solid $title-color;
@@ -152,14 +152,14 @@
   fill: transparent;
   transition: border $transition-active, background-color $transition-active,
     fill $transition-active;
-  .check-input:checked + .check-text & {
+  .check__input:checked + .check__text & {
     background-color: $accent-color;
     border: none;
     fill: $white-color;
   }
 }
 
-.modal-button {
+.modal__button {
   @extend %button;
   @include centredFlex();
   margin: 0 auto;
