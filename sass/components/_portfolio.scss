@@ -1,7 +1,11 @@
 .portfolio {
   background-color: $white-color;
   &__list {
+    @extend %list;
     margin-bottom: 50px;
+  }
+  &__title {
+    @extend %title;
   }
 }
 
@@ -38,6 +42,7 @@
 }
 
 .card {
+  @extend %list;
   @include centredFlex($ai: none, $jc: none);
   flex-wrap: wrap;
   margin-left: calc(-1 * $tipical-margin);
@@ -48,6 +53,7 @@
     margin-top: $tipical-margin;
   }
   &__link {
+    @extend %link;
     @include centredFlex($df: block, $ai: none, $jc: none);
     transition: box-shadow $transition-active;
     &:hover,
