@@ -80,17 +80,17 @@ p {
   border: none;
 }
 
-.team__list, .works__list, .studio__list, .contact, .navigation__list, .socials {
+.address__list, .clients__list, .team__list, .works__list, .studio__list, .contact, .navigation__list, .socials {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.contact__link, .navigation__link, .socials__link {
+.address__link, .clients__link, .contact__link, .navigation__link, .socials__link, .logo {
   text-decoration: none;
 }
 
-.team__title, .works__title, .studio__title {
+.clients__title, .team__title, .works__title, .studio__title {
   color: #212121;
   font-weight: 700;
   font-size: 36px;
@@ -457,6 +457,7 @@ p {
 
 .join__title {
   color: #ffffff;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -529,8 +530,7 @@ p {
   background-color: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-
-.button__icon {
+.form__icon {
   fill: #ffffff;
   margin-left: 10px;
 }

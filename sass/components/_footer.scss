@@ -13,6 +13,7 @@
   }
 }
 .address__link {
+  @extend %link;
   color: $white-color;
   font-size: 14px;
   line-height: 1.71;
@@ -25,6 +26,7 @@
 }
 
 .address__list {
+  @extend %list;
   margin-top: 20px;
 }
 
@@ -40,6 +42,7 @@
 
 .join__title {
   color: $white-color;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -66,7 +69,6 @@
 
 .form {
   @include centredFlex($ai: none, $jc: none);
-
   &__input {
     background-color: transparent;
     width: 358px;
@@ -111,9 +113,8 @@
       box-shadow: $box-shadow-rgba;
     }
   }
-}
-
-.button__icon {
-  fill: $white-color;
-  margin-left: 10px;
+  &__icon {
+    fill: $white-color;
+    margin-left: 10px;
+  }
 }

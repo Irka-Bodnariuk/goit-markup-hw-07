@@ -1,4 +1,5 @@
 .logo {
+  @extend %link;
   color: $black-color;
   font-family: Raleway, sans-serif;
   font-weight: 700;
